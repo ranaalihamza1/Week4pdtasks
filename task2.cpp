@@ -1,17 +1,21 @@
 #include<iostream>
 using namespace std;
-void reverse(string in1);
+void printMaze();
 main()
 {
-	string in1;
-	cout<<"Enter 'true' or 'false': ";
-	cin>>in1;
-	reverse(in1);
+ system("cls");
+ printMaze();
 }
-void reverse(string in1)
+void printMaze()
 {
-	if(in1=="true")
-	{cout<<"false";}
-	if(in1=="false")
-	{cout<<"true";}
+ cout << "#######################" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#######################" << endl;
 }
+

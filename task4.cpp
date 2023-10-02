@@ -1,17 +1,46 @@
-#include<iostream>
+#include <iostream>
+#include <windows.h>
 using namespace std;
-void checkspeed(int speed);
+void gotoxy(int x, int y);
+void printMaze();
+void moveplayer (int x,int y);
 main()
 {
-	int speed;
-	cout<<"Speed: ";
-	cin>>speed;
-	checkspeed(speed);
+ int x = 3  , y = 4;
+ system ("cls");
+ printMaze();
+ while(true)
+ {
+      x=x+1;
+ gotoxy(x,y) ;
+ cout<<"*";
+ Sleep(400);
+ gotoxy (x,y);
+ cout <<" ";
+ gotoxy (0,10); 
+ if(x==10)
+ {
+ 	x=3,y=4;
+ }
+
 }
-void checkspeed(int speed)
-{	
-	if(speed<=100)
-	{cout<<"Perfect! You're going good.";}
-	if(speed>100)
-	{cout<<"Halt... YOU WILL BE CHALLENGED!!!";}
+}
+void gotoxy(int x,int y)
+{
+COORD coordinates;
+ coordinates.X = x;
+ coordinates.Y = y;
+ SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coordinates);
+} 
+void printMaze()
+{
+ cout << "#######################" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#                     #" << endl;
+ cout << "#######################" << endl;
 }
